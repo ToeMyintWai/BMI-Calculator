@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  padding: 30px;
+}
+
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .oswald {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }  
+
+.container {
+  background: rgb(49, 172, 186);
+  background: linear-gradient(
+    90deg,
+    rgba(49, 172, 186, 1) 0%,
+    rgba(255, 214, 178, 1) 100%
+  );
+  height: 100vh;
+  padding: 30px;
+}
+
+#content {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 50%;
+  margin: 0px auto;
+  height: 100%;
+  text-align: center;
+}
+
+
+
+.user-inputs {
+  margin-top: 10px;
+  height: 25px;
+  padding: 0 5px;
+}
+
+.user-inputs-container {
+  margin-bottom: 30px;
+  width: 25%;
+  margin: 20px auto;
+}
+
+.weight-input{
+  width: 92%;
+}
+
+.height-input {
+  width: 45%;
+}
+
+#btn {
+  margin: 20px auto;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: #9CFF2E;
+  color: #ffffff;
+}
+
+#result-number {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 16px auto;
+}
+
+#result-text {
+  font-weight: 500;
+}
+
+
+/****mobile***/
+
+@media (max-width:760px) {
+  #content {
+    width: 90%;
+  }
+
+  .user-inputs-container {
+    width: 35%;
+  }
+  
+}
