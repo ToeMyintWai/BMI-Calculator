@@ -1,3 +1,9 @@
+:root {
+	--primary-color: #185ee0;
+	--secondary-color: #e6eef9;
+}
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -47,6 +53,9 @@ h1 {
 }
 
 
+.interface {
+  margin-top: 50px;
+}
 
 .user-inputs {
   margin-top: 10px;
@@ -89,6 +98,87 @@ h1 {
 }
 
 
+ /* for sliding tab */
+
+ #tabs {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+ }
+
+
+ #systems>input {
+  display: none;
+ }
+
+ #systems {
+ 
+  display: flex;
+	position: relative;
+	background-color: #fff;
+	box-shadow: 0 0 1px 0 rgba(#185ee0, 0.15), 0 6px 12px 0 rgba(#185ee0, 0.15);
+	padding: 0.3rem;
+	border-radius: 99px; 
+
+ }
+
+
+ .tab {
+  display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 25px;
+	width: 75px;
+	font-weight: 500;
+	border-radius: 99px; 
+	cursor: pointer;
+	transition: color 0.15s ease-in;
+  z-index: 4;
+ }
+
+ input[type="radio"] {
+	&:checked {
+		& + label {
+			color: #185ee0;
+		}
+	}
+}
+
+input[id="bmi-imperial"] {
+	&:checked {
+		& ~ .glider {
+			transform: translateX(0);
+		}
+	}
+}
+
+input[id="bmi-metric"] {
+	&:checked {
+		& ~ .glider {
+			transform: translateX(100%);
+		}
+	}
+}
+
+
+
+
+
+  .glider {
+    position: absolute;
+    display: flex;
+    height: 25px;
+    width: 75px;
+    background-color: var(--secondary-color);
+    z-index: 1;
+    border-radius: 99px; 
+    transition: 0.25s ease-out;
+  }
+  
+
 /****mobile***/
 
 @media (max-width:760px) {
@@ -99,5 +189,10 @@ h1 {
   .user-inputs-container {
     width: 35%;
   }
-  
+
+  #systems {
+		transform: scale(0.8);
+	}
 }
+
+  

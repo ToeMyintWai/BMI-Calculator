@@ -11,25 +11,68 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-  
   </head>
   <body>
     <div class="container roboto-regular">
       <div id="content">
         <h1 class="oswald">BMI Calculator</h1>
-      
+        <div id="tabs">
+          <div id="systems">
+            <input
+              type="radio"
+              onchange="bmiSystems()"
+              name="bmi-system"
+              id="bmi-imperial"
+              checked
+            />
+            <label for="bmi-imperial" class="tab">Imperial</label>
+
+            <input
+              type="radio"
+              onchange="bmiSystems()"
+              name="bmi-system"
+              id="bmi-metric"
+            />
+            <label for="bmi-metric" class="tab">Metric</label>
+
+            <span class="glider"></span>
+          </div>
+        </div>
+
+        <div class="interface">
           <div class="user-inputs-container">
             <label class="label-name" for="weight">Weight</label><br />
-            <input id="weight" type="number" placeholder="lb" class="user-inputs weight-input" required/>
+            <input
+              id="weight"
+              type="number"
+              class="user-inputs weight-input"
+              placeholder="lbs"
+              required
+            />
           </div>
 
           <div class="user-inputs-container">
             <label class="label-name" for="height">Height</label><br />
-            <input type="number" min="1" id="feet" class="height-input user-inputs" placeholder="ft" required/>
-            <input type="number" min="1"  id="inches" class="height-input user-inputs" placeholder="in">
+            <input
+              type="number"
+              min="1"
+              id="feet"
+              class="height-input user-inputs"
+              placeholder="ft"
+              required
+            />
+            <input
+              type="number"
+              min="1"
+              id="inches"
+              class="height-input user-inputs"
+              placeholder="in"
+              required
+            />
           </div>
-        
-        <button id="btn" type="">Calculate BMI</button>
+
+          <button id="btn" type="">Calculate BMI</button>
+        </div>
         <p id="bmi-text">Your BMI is:</p>
         <p id="result-number">0.0</p>
         <p id="result-text"></p>
@@ -37,5 +80,4 @@
     </div>
     <script type="text/javascript" src="my.js"></script>
   </body>
- 
 </html>
